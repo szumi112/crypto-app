@@ -1,0 +1,609 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .wrapper-container {
+    @apply max-w-5xl mx-auto px-2;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(36, 53, 66) 0%, rgb(32, 44, 55) 100%);
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  background-color: rgb(37, 56, 70);
+  margin: 0px auto 0px;
+  height: 100%;
+  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 50px 0;
+}
+
+#root {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.App {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 125px auto;
+  max-width: 1100px;
+}
+
+.redPercent {
+  color: red;
+  font-size: 0.7rem;
+}
+
+.greenPercent {
+  color: green;
+  font-size: 0.7rem;
+}
+
+.searchBar {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto 100px;
+}
+
+.searchBar label {
+  color: #fff;
+}
+
+.searchBar input {
+  margin: 15px auto;
+  padding-left: 8px;
+  height: 37px;
+  width: 250px;
+}
+
+.searchBar button {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.stock {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px auto 0;
+  width: 30%;
+  min-width: 255px;
+  position: relative;
+  margin: 15px auto;
+}
+
+.displaynone {
+  width: 0;
+  display: none;
+}
+
+.stock:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.stock h1 {
+  font-size: 21px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 10px;
+  padding: 0 5px;
+}
+
+.stockPrice {
+  font-size: 0.85rem;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  color: rgba(67, 67, 67, 0.75);
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-shadow: 1px 1px 2px rgba(19, 19, 19, 0.5);
+  font-size: 24px;
+}
+
+.deleteBtn:hover {
+  color: rgb(159, 0, 0);
+}
+
+.deleteBtnCoin {
+  background: none;
+  border: none;
+  color: rgba(67, 67, 67, 0.75);
+  position: absolute;
+  top: -4px;
+  right: -110px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-shadow: 1px 1px 2px rgba(19, 19, 19, 0.5);
+  font-size: 24px;
+  cursor: default !important;
+}
+
+.deleteBtnCoin:hover {
+  color: rgb(159, 0, 0);
+}
+
+.howto {
+  color: white;
+}
+
+.boldmodal {
+  font-weight: bold;
+}
+
+.commentmodal {
+  font-size: 0.8rem;
+}
+
+.changemodalfont {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(83, 83, 83);
+}
+
+.specChars {
+  margin: 25px 0;
+}
+
+.specChars button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.introText {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.refreshBtn {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  width: 15px;
+  height: 15px;
+  background: none;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  background: url("refreshicon.png") top center no-repeat;
+}
+
+.refreshBtnCoin {
+  position: absolute;
+  left: -109px;
+  top: 7px;
+  width: 15px;
+  height: 15px;
+  background: none;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  background: url("refreshicon.png") top center no-repeat;
+}
+
+.refreshBtn:hover {
+  transition: all 0.2s ease-in-out;
+  background: url("refreshiconhover.png") top center no-repeat;
+}
+
+.refreshBtnCoin:hover {
+  transition: all 0.2s ease-in-out;
+  background: url("refreshiconhover.png") top center no-repeat;
+}
+
+.chartcont {
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  margin: 0 auto;
+  align-items: center;
+  color: white;
+  max-width: 800px;
+}
+
+@media screen and (max-width: 800px) {
+  .chartcont {
+    width: 80%;
+  }
+}
+
+.chartwrapper {
+  color: white;
+}
+
+.nav {
+  color: #fff;
+  margin: 25px auto;
+  padding-bottom: 70px;
+  justify-content: center;
+  height: auto;
+}
+
+.nav a {
+  margin: 0 20px;
+  background-color: rgba(34, 45, 52, 0.8);
+  text-decoration: none;
+  width: 100px;
+  height: 35px;
+  color: rgb(152, 152, 152);
+  padding-top: 4px;
+  border-radius: 3px;
+}
+
+.nav a.active {
+  background-color: rgb(232, 64, 90);
+  box-shadow: 0px 0px 23px rgba(255, 58, 81, 0.55);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.57);
+}
+
+.nav a:hover {
+  color: rgb(224, 224, 224);
+  background-color: rgb(27, 37, 43);
+  box-shadow: 0px 0px 22px rgba(27, 37, 43, 0.8);
+}
+
+.nav a:active {
+  background-color: rgb(58, 154, 167);
+}
+
+.crypto {
+  color: #fff;
+}
+
+.coin-margin {
+  margin-bottom: 25px;
+}
+
+.cryptoSearch {
+  color: #fff;
+}
+
+.coin {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  margin: 10px auto 0;
+  max-width: 1100px;
+}
+
+.coin-container {
+  color: #fff;
+  margin: 50px auto !important;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.coin-container img {
+  width: 30px;
+  margin: 5px auto;
+}
+
+.cryptoTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red {
+  color: #f00606;
+}
+
+.green {
+  color: #11d811;
+}
+
+.coin-text {
+  color: white;
+}
+
+.coin-app form {
+  margin: 25px auto 15px;
+}
+
+.coin-app Button {
+  width: 250px;
+}
+
+.coin-input {
+  padding-left: 8px;
+  height: 37px;
+  width: 250px;
+  margin-bottom: -15px !important;
+}
+
+.searchbarComponent {
+  display: flex;
+  width: 250px;
+  height: 45px;
+  margin: 0 auto;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+}
+
+.searchbarComponent:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.searchbarComponent p {
+  cursor: pointer;
+  padding: 10px 0 0 7px;
+}
+
+.searchbarSuggestionAdd {
+  cursor: pointer;
+  padding: 4px 7px 0 0;
+  font-size: 20px;
+}
+
+.cryptoChartDates {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 0px;
+  max-width: 80%;
+}
+
+.cryptoChartDates button {
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .cryptoChartDates {
+    display: inline-block;
+  }
+
+  .cryptoChartDates button {
+    margin: 10px;
+  }
+
+  .chartcont {
+    margin-top: 25px;
+  }
+
+  .coin-search {
+    margin: 10px auto;
+  }
+}
+
+.coin-search-horizontal {
+  display: flex;
+  flex-direction: column !important;
+}
+
+.coin-search h5 {
+  margin: 30px;
+  color: white;
+  font-weight: normal;
+}
+
+.coin-search span {
+  color: rgb(255, 175, 132);
+}
+
+.boldSpan {
+  font-weight: bold;
+}
+
+.resizeSvg {
+  width: 50px;
+}
+
+nav.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: linear-gradient(
+    to left,
+    rgba(26, 32, 37, 0.8),
+    rgba(32, 40, 47, 0.6)
+  );
+  color: black;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(211, 224, 241);
+  font-size: 18px;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.LoginHeader {
+  color: rgb(50, 77, 97);
+  margin-bottom: 20px;
+}
+
+.Login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #888888;
+}
+
+.Login input[type="email"],
+.Login input[type="password"] {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+}
+
+.Login button[type="submit"] {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Login button[type="button"] {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.loginPointer {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.loginPointer:hover {
+  color: #525252;
+}
+
+.passwordRed {
+  color: red;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+}
+
+.coin-trending-link {
+  display: flex;
+  text-decoration: none;
+  color: #e6eeef;
+  transition: all 0.2s ease-in-out;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.coin-trending-link:hover {
+  background-color: rgb(46, 67, 82);
+}
+
+.markets-style {
+  align-items: center;
+}
+
+.markets-style:hover {
+  background-color: rgba(95, 126, 149, 0.3);
+}
+
+.coin-trending-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.coin-trending-content {
+  display: flex;
+  align-items: center;
+}
+
+.coin-trending-score {
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.coin-trending-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.coin-trending-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.coin-trending-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.coin-trending-symbol {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.trading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="number"] {
+  width: 150px;
+}
+
+button {
+  margin-top: 20px;
+}
