@@ -9,8 +9,8 @@ const LiveBTC = () => {
 
   useEffect(() => {
     const ws = new WebSocket(
-      // "wss://ms-mern-crypto-app.onrender.com/"
-      "ws://localhost:5005"
+      "ws://ms-mern-crypto-app.onrender.com/"
+      // "ws://localhost:5005"
     );
 
     ws.onmessage = (message) => {
