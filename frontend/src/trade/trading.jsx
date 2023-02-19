@@ -20,13 +20,13 @@ const BitcoinTrading = () => {
   const [tradesPerPage, setTradesPerPage] = useState(5);
 
   const ws = new WebSocket(
-    "ws://ms-mern-crypto-app.onrender.com/"
+    "wss://ms-mern-crypto-app.onrender.com/"
     // "ws://localhost:5005"
   );
 
   useEffect(() => {
     const ws = new WebSocket(
-      "ss://ms-mern-crypto-app.onrender.com/"
+      "wss://ms-mern-crypto-app.onrender.com/"
       // "ws://localhost:5005"
     );
 
