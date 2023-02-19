@@ -743,3 +743,14 @@ button {
     }
   }
 }
+
+@media only screen and (max-width: 548px) {
+  @keyframes scroll {
+    from {
+      transform: translateX(390%);
+    }
+    to {
+      transform: translateX(-380%);
+    }
+  }
+}
