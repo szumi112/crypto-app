@@ -23,7 +23,7 @@ const Markets = () => {
   }
 
   return (
-    <section className="mt-8">
+    <section style={{ margin: "100px 0 0 0" }}>
       <h1 className="text-2xl mb-2 text-white">Markets</h1>
       {response && response.map((coin) => <Coin key={coin.id} coin={coin} />)}
     </section>

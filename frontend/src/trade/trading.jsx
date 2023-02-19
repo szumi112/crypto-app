@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Pagination from "./pagination";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const BitcoinTrading = () => {
   const [price, setPrice] = useState(localStorage.getItem("price") || 0);
   const [amount, setAmount] = useState(localStorage.getItem("amount") || 0);
@@ -138,19 +141,23 @@ const BitcoinTrading = () => {
     return total + tradeProfitLoss;
   }, 0);
 
+  useEffect(() => {
+    if (error) {
+      toast.warning(
+        "Check if the chart on the bottom is moving. We use free data, and the app might not work perfectly at all times. Please be patient and wait a lil bit, if something isn't working. 😊",
+        { autoClose: true }
+      );
+    }
+  }, [error]);
+
   return (
     <div className="trading-container">
+      <ToastContainer />
       <h1 className="text-2xl mb-2 text-gray-200 mt-8">Bitcoin Trading</h1>
       {loading ? (
         <p>Loading...</p>
       ) : (
         <>
-          {error && (
-            <p className="text-red-700 ">
-              We use free data, and the app might not work perfectly at all
-              times. Please be patient if something isn't working. 😊
-            </p>
-          )}
           <p className="mb-2 text-gray-300 mt-6">
             Current Price: ${parseFloat(price).toFixed(2)}
           </p>

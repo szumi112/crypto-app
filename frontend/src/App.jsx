@@ -20,7 +20,7 @@ function App() {
           {/* <Route path="/coins" element={<Coins />} /> */}
           <Route path="/chart" element={<FetchCrypto />} />
           <Route path="/coin/:id" element={<CryptoDetail />} />
-          <Route path="/coins" element={<CryptoHome />} />
+          <Route path="/" element={<CryptoHome />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/trade" element={<TradeContainer />} />
         </>

@@ -9,16 +9,16 @@ const Navigation = () => {
     <nav className="main-nav">
       <ul>
         <li>
-          <Link to="/coins">Coins</Link>
+          <Link to="/">Coins</Link>
+        </li>
+        <li>
+          <Link to="/trade">Trade</Link>
         </li>
         <li>
           <Link to="/chart">Chart</Link>
         </li>
         <li>
           <Link to="/news">News</Link>
-        </li>
-        <li>
-          <Link to="/trade">Trade</Link>
         </li>
       </ul>
     </nav>

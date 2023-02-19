@@ -607,3 +607,139 @@ input[type="number"] {
 button {
   margin-top: 20px;
 }
+
+/* slider */
+.anews-container {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.65);
+  background: linear-gradient(0deg, #1b2630 0%, #26384a 100%);
+  overflow: hidden;
+}
+
+.fixed {
+  top: 0;
+}
+
+.anews-container .atitle {
+  position: absolute;
+  background: #df2020;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  color: white;
+  font-weight: bold;
+  z-index: 200;
+}
+
+.anews-container ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0 50px; /* Add padding to the ul element */
+  animation: scroll 25s linear infinite;
+  flex-wrap: nowrap;
+}
+
+.anews-container ul li {
+  padding: 0 24px;
+  color: #d2ebeb;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 200px;
+  white-space: nowrap;
+}
+
+.anews-container ul li:last-child {
+  margin-right: 0;
+}
+
+.anews-container ul li .anews-trending-link {
+  display: flex;
+  text-decoration: none;
+  color: #d2ebeb;
+  transition: all 0.2s ease-in-out;
+  width: max-content;
+}
+
+.anews-container ul li .anews-trending-link:hover {
+  color: rgb(179, 208, 217);
+  background: linear-gradient(180deg, #405c7b 0%, #1d2a38 100%);
+  border-bottom: 2px solid rgb(179, 208, 217);
+  border-top: 2px solid rgba(179, 208, 217, 0.55);
+}
+
+.anews-trending-item {
+  white-space: nowrap;
+}
+
+.anews-trending-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.anews-trending-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.anews-trending-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.anews-trending-symbol {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.anews-trending-price {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ared {
+  color: rgb(153, 255, 0);
+}
+
+.agreen {
+  color: rgb(255, 0, 0);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(125%);
+  }
+  to {
+    transform: translateX(-125%);
+  }
+}
+
+@media only screen and (max-width: 848px) {
+  @keyframes scroll {
+    from {
+      transform: translateX(240%);
+    }
+    to {
+      transform: translateX(-240%);
+    }
+  }
+}
+
+@media only screen and (max-width: 648px) {
+  @keyframes scroll {
+    from {
+      transform: translateX(290%);
+    }
+    to {
+      transform: translateX(-280%);
+    }
+  }
+}

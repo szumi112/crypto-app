@@ -8,6 +8,8 @@ const CoinDetail = () => {
     `coins/${id}?localization=false&tickers=false&market_data=false&community_data=false&sparkline=false`
   );
 
+  console.log(response);
+
   if (!response) {
     return (
       <div className="wrapper-container mt-8">
