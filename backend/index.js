@@ -1,7 +1,7 @@
 const express = require("express");
-const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
+// const mongoose = require("mongoose");
+// const bcrypt = require("bcryptjs");
+// const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const crypto = require("./crypto.js");
 const http = require("http");
@@ -34,14 +34,14 @@ const uri =
 
 app.use(express.json());
 
-mongoose.set("strictQuery", false);
-// Connect to MongoDB
-mongoose
-  .connect(uri, {
-    useNewUrlParser: true,
-  })
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.log(err));
+// mongoose.set("strictQuery", false);
+// // Connect to MongoDB
+// mongoose
+//   .connect(uri, {
+//     useNewUrlParser: true,
+//   })
+//   .then(() => console.log("MongoDB connected"))
+//   .catch((err) => console.log(err));
 
 const wss = new WebSocket.Server({ server });
 
