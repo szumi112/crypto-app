@@ -1,5 +1,5 @@
 import fetchAxios from "../customHooks/fetchAxios";
-import CoinTrending from "./CoinTrending";
+import CoinTrending from "./coinTrending";
 import Skeleton from "./Skeleton";
 
 const Trending = () => {
